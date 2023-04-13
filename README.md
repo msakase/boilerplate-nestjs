@@ -8,7 +8,7 @@ NestJSの自分なりのboilerplate
 1. Node周りを準備してね。
 2. リポジトリをクローン
 ```bash
-$ git clone 
+$ git clone https://github.com/msakase/boilerplate-nestjs.git
 ```
 3. フォルダに移動してインストール(以下はyarn)
 ```bash
