@@ -7,7 +7,6 @@ import { UsersService } from '../users.service';
 import { UsersController } from '../users.controller';
 import { CreateUserDto } from '../dto/create-user.dto';
 import { UpdateUserDto } from '../dto/update-user.dto';
-import { getResponseUser } from '../dto/response-user.dto';
 
 describe('UsersController', () => {
   let controller: UsersController;
@@ -42,7 +41,7 @@ describe('UsersController', () => {
         return user;
       });
 
-      expect(controller.create(dto)).resolves.toEqual(getResponseUser(user));
+      expect(controller.create(dto)).resolves.toEqual(user);
     });
   });
 
@@ -54,7 +53,7 @@ describe('UsersController', () => {
         return [user];
       });
 
-      expect(controller.findAll()).resolves.toEqual([getResponseUser(user)]);
+      expect(controller.findAll()).resolves.toEqual([user]);
     });
 
     it('should return empty array by not found users', () => {
@@ -76,7 +75,7 @@ describe('UsersController', () => {
         return user;
       });
 
-      expect(controller.findOne(1)).resolves.toEqual(getResponseUser(user));
+      expect(controller.findOne(1)).resolves.toEqual(user);
     });
 
     it('should return not found exception', () => {
@@ -110,7 +109,7 @@ describe('UsersController', () => {
         return expectUser;
       });
 
-      expect(controller.update(user.id.toString(), dto)).resolves.toEqual(getResponseUser(expectUser));
+      expect(controller.update(user.id.toString(), dto)).resolves.toEqual(expectUser);
     });
   });
 
@@ -122,7 +121,7 @@ describe('UsersController', () => {
         return user;
       });
 
-      expect(controller.remove(user.id.toString())).resolves.toEqual(getResponseUser(user));
+      expect(controller.remove(user.id.toString())).resolves.toEqual(user);
     });
   });
 });
