@@ -13,6 +13,9 @@
     "test/(.*)": "<rootDir>/test/$1"
   },
   "rootDir": "../../",
+  "setupFiles": [
+    "<rootDir>/test/common/jest.factory.ts"
+  ],
   "testEnvironment": "node",
   "testRegex": ".e2e-spec.ts$",
   "transform": {

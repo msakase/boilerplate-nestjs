@@ -15,7 +15,7 @@
   "rootDir": "./",
   "setupFiles": [
     "<rootDir>/test/unit/jest.helpers.ts",
-    "<rootDir>/test/unit/jest.factory.ts"
+    "<rootDir>/test/common/jest.factory.ts"
   ],
   "testRegex": ".*\\.spec\\.ts$",
   "transform": {

@@ -1,7 +1,6 @@
 ## Description
 
 NestJSの自分なりのboilerplate
-※e2eは未完
 
 ## Getting Started
 
@@ -31,11 +30,6 @@ $ npm run migration:gen -name={付加する名前}
 ### 開発環境に反映
 ```bash
 $ yarn migration:run
-```
-
-### e2eテスト環境に反映
-```bash
-$ yarn migration:test:run
 ```
 
 ※revertは上のrunをrevに変えて
