@@ -1,3 +1,0 @@
-DROP SCHEMA IF EXISTS testdb;
-CREATE SCHEMA testdb;
-GRANT ALL ON testdb.* TO test;
